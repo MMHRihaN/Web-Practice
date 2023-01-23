@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style type="text/css">
+
+		/* Set the size of the div element
+		that contains the map */
+		#map {
+			height: 400px;
+			width: 400px;
+		}
+		
+		h2 {
+			color: #101422;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>
+		Here is a location of our website. <br> Webpage: Vegbuddy 
+		
+	</h2>
+ 
+	<div id="map"></div>
+
+	<!--Add a script by google -->
+	<script src=
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyDNwEmP9glLXK54Idy7Y56Uji2BmQqZvUE&callback=initMap&libraries=&v=weekly"
+		async>
+	</script>
+
+	<script>
+
+		// Initialize and add the map
+		function initMap() {
+
+			const vegbuddy = {
+				lat: 22.47090,
+				lng: 91.78569
+			};
+
+			// Creating the map
+			const map = new google.maps.Map(
+					document.getElementById("map"), {
+
+				// Set the zoom of the map
+				zoom: 17.56,
+				center: vegbuddy,
+			});
+		}
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+  <!DOCTYPE html>
+-->
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<!--
+<html>
+  <head>
+    <title>Add Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3> 
+  -->
+    <!--The div element for the map -->
+    <!--
+    <div id="map">
+      #map {
+        height: 400px; /* The height is 400 pixels */
+        width: 100%; /* The width is the width of the web page */
+      }
+    </div> 
+    -->
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+      <!-- 
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNwEmP9glLXK54Idy7Y56Uji2BmQqZvUE&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
+
+-->
+
